@@ -7,25 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BA3662C0289710043F152 /* ImageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BA3652C0289710043F152 /* ImageInfoViewController.swift */; };
 		FB215F4B2BE8184B00D4B8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB215F4A2BE8184B00D4B8CB /* AppDelegate.swift */; };
 		FB215F4D2BE8184B00D4B8CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB215F4C2BE8184B00D4B8CB /* SceneDelegate.swift */; };
-		FB215F4F2BE8184B00D4B8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB215F4E2BE8184B00D4B8CB /* ViewController.swift */; };
+		FB215F4F2BE8184B00D4B8CB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB215F4E2BE8184B00D4B8CB /* GalleryViewController.swift */; };
 		FB215F522BE8184B00D4B8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB215F502BE8184B00D4B8CB /* Main.storyboard */; };
 		FB215F552BE8184B00D4B8CB /* SnapShred.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB215F532BE8184B00D4B8CB /* SnapShred.xcdatamodeld */; };
 		FB215F572BE8185000D4B8CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB215F562BE8185000D4B8CB /* Assets.xcassets */; };
 		FB215F5A2BE8185000D4B8CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB215F582BE8185000D4B8CB /* LaunchScreen.storyboard */; };
+		FB215F622BE82C6700D4B8CB /* CameraScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB215F612BE82C6700D4B8CB /* CameraScreenViewController.swift */; };
+		FB74DE2C2BF9AB4100880F29 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74DE2B2BF9AB4100880F29 /* PreviewViewController.swift */; };
+		FB7BDCA92BFC337D001107C9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BDCA82BFC337D001107C9 /* TabBarController.swift */; };
+		FBCC52C92BFD285600D81C53 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC52C72BFD285600D81C53 /* CollectionViewCell.swift */; };
+		FBCC52CA2BFD285600D81C53 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCC52C82BFD285600D81C53 /* CollectionViewCell.xib */; };
+		FBCC52CD2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC52CC2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift */; };
+		FBCC52D22C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC52D02C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift */; };
+		FBCC52D32C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCC52D12C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BA3652C0289710043F152 /* ImageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoViewController.swift; sourceTree = "<group>"; };
 		FB215F472BE8184B00D4B8CB /* SnapShred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapShred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB215F4A2BE8184B00D4B8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB215F4C2BE8184B00D4B8CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB215F4E2BE8184B00D4B8CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB215F4E2BE8184B00D4B8CB /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		FB215F512BE8184B00D4B8CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB215F542BE8184B00D4B8CB /* SnapShred.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapShred.xcdatamodel; sourceTree = "<group>"; };
 		FB215F562BE8185000D4B8CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB215F592BE8185000D4B8CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB215F5B2BE8185000D4B8CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB215F612BE82C6700D4B8CB /* CameraScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreenViewController.swift; sourceTree = "<group>"; };
+		FB509D112C02EBDE008E0B76 /* SnapShred_V2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapShred_V2.xcdatamodel; sourceTree = "<group>"; };
+		FB74DE2B2BF9AB4100880F29 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		FB7BDCA82BFC337D001107C9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FBCC52C72BFD285600D81C53 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		FBCC52C82BFD285600D81C53 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		FBCC52CC2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeCollectionViewController.swift; sourceTree = "<group>"; };
+		FBCC52D02C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBCC52D12C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSwipeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +79,11 @@
 			children = (
 				FB215F4A2BE8184B00D4B8CB /* AppDelegate.swift */,
 				FB215F4C2BE8184B00D4B8CB /* SceneDelegate.swift */,
-				FB215F4E2BE8184B00D4B8CB /* ViewController.swift */,
+				FB7BDCA82BFC337D001107C9 /* TabBarController.swift */,
+				FB215F612BE82C6700D4B8CB /* CameraScreenViewController.swift */,
+				FB74DE2B2BF9AB4100880F29 /* PreviewViewController.swift */,
+				FBCC52D42C010A8A00D81C53 /* PhotoSwipe */,
+				FBCC52CB2BFD35A000D81C53 /* GalleryView */,
 				FB215F502BE8184B00D4B8CB /* Main.storyboard */,
 				FB215F562BE8185000D4B8CB /* Assets.xcassets */,
 				FB215F582BE8185000D4B8CB /* LaunchScreen.storyboard */,
@@ -68,6 +91,27 @@
 				FB215F532BE8184B00D4B8CB /* SnapShred.xcdatamodeld */,
 			);
 			path = SnapShred;
+			sourceTree = "<group>";
+		};
+		FBCC52CB2BFD35A000D81C53 /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				FB215F4E2BE8184B00D4B8CB /* GalleryViewController.swift */,
+				FBCC52C72BFD285600D81C53 /* CollectionViewCell.swift */,
+				FBCC52C82BFD285600D81C53 /* CollectionViewCell.xib */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
+		FBCC52D42C010A8A00D81C53 /* PhotoSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				FBCC52CC2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift */,
+				FBCC52D02C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift */,
+				FBCC52D12C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib */,
+				FB1BA3652C0289710043F152 /* ImageInfoViewController.swift */,
+			);
+			path = PhotoSwipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB215F5A2BE8185000D4B8CB /* LaunchScreen.storyboard in Resources */,
+				FBCC52D32C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib in Resources */,
 				FB215F572BE8185000D4B8CB /* Assets.xcassets in Resources */,
+				FBCC52CA2BFD285600D81C53 /* CollectionViewCell.xib in Resources */,
 				FB215F522BE8184B00D4B8CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB215F4F2BE8184B00D4B8CB /* ViewController.swift in Sources */,
+				FBCC52CD2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift in Sources */,
+				FB215F4F2BE8184B00D4B8CB /* GalleryViewController.swift in Sources */,
+				FBCC52D22C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift in Sources */,
 				FB215F4B2BE8184B00D4B8CB /* AppDelegate.swift in Sources */,
+				FBCC52C92BFD285600D81C53 /* CollectionViewCell.swift in Sources */,
 				FB215F552BE8184B00D4B8CB /* SnapShred.xcdatamodeld in Sources */,
+				FB215F622BE82C6700D4B8CB /* CameraScreenViewController.swift in Sources */,
+				FB7BDCA92BFC337D001107C9 /* TabBarController.swift in Sources */,
 				FB215F4D2BE8184B00D4B8CB /* SceneDelegate.swift in Sources */,
+				FB74DE2C2BF9AB4100880F29 /* PreviewViewController.swift in Sources */,
+				FB1BA3662C0289710043F152 /* ImageInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AUL9X9V68D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnapShred/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AUL9X9V68D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnapShred/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,9 +425,10 @@
 		FB215F532BE8184B00D4B8CB /* SnapShred.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				FB509D112C02EBDE008E0B76 /* SnapShred_V2.xcdatamodel */,
 				FB215F542BE8184B00D4B8CB /* SnapShred.xcdatamodel */,
 			);
-			currentVersion = FB215F542BE8184B00D4B8CB /* SnapShred.xcdatamodel */;
+			currentVersion = FB509D112C02EBDE008E0B76 /* SnapShred_V2.xcdatamodel */;
 			path = SnapShred.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
