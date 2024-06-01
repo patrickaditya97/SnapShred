@@ -7,15 +7,63 @@
 
 import UIKit
 import CoreData
+import BackgroundTasks
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NSLog("Starting Application....")
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.aditya.SnapShred.db_cleaning", using: nil) { task in
+            self.handleAppRefresh(task: task as! BGAppRefreshTask)
+        }
+        scheduleAppRefresh()
+        
         return true
+    }
+    
+    func scheduleAppRefresh() {
+        let bgRequest = BGAppRefreshTaskRequest(identifier: "com.aditya.SnapShred.db_cleaning")
+        bgRequest.earliestBeginDate = Date(timeIntervalSinceNow: 30)
+        
+        do {
+            try BGTaskScheduler.shared.submit(bgRequest)
+        } catch {
+            print("Not able to start BGAppRefreshTaskRequest")
+        }
+    }
+    
+    func handleAppRefresh(task: BGAppRefreshTask) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        
+        backgroundContext.perform {
+            do {
+                let fetchRequest: NSFetchRequest<ImageDataEntity> = ImageDataEntity.fetchRequest()
+                let objectsFromCoreData = try backgroundContext.fetch(fetchRequest)
+                
+                for object in objectsFromCoreData {
+                    let dateCreated = object.dateCreated
+                    let lifetime = object.lifetime
+                    
+                    let timeElapsed = Int(Date().timeIntervalSince(dateCreated!)) - Int(lifetime)
+                    
+                    if(timeElapsed > lifetime) {
+                        backgroundContext.delete(object)
+                    }
+                }
+                
+                try backgroundContext.save()
+            } catch {
+                print("Cannot Delete Objects")
+            }
+        }
+        
+        task.setTaskCompleted(success: true)
+        
+        
+        scheduleAppRefresh()
     }
 
     // MARK: UISceneSession Lifecycle
@@ -42,6 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "SnapShred")
+        container.persistentStoreDescriptions.first?.setOption(true as NSObject, forKey: NSMigratePersistentStoresAutomaticallyOption)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

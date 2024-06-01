@@ -48,7 +48,6 @@ class GalleryViewController: UICollectionViewController {
         }catch let error as NSError {
             print(error)
         }
-
     }
     
     func fetchAll() {
@@ -71,9 +70,10 @@ extension GalleryViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.cellIdentifier, for: indexPath) as! CollectionViewCell
         
-        guard let uiImage = UIImage(data: photoDataList[indexPath[1]].imageData!) else { return UICollectionViewCell() }
-        
-        cell.configure(with: uiImage)
+        if let image = photoDataList[indexPath[1]].imageData,
+            let uiImage = UIImage(data: image) {
+            cell.configure(with: uiImage)
+        }
         
         return cell
     }
@@ -84,7 +84,7 @@ extension GalleryViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let photoSwipeView = storyBoard.instantiateViewController(withIdentifier: "photoSwipeViewController") as? PhotoSwipeCollectionViewController else { return }
-        photoSwipeView.images = photoDataList
+//        photoSwipeView.images = photoDataList
         photoSwipeView.selectedImageIndex = indexPath
         
         self.navigationController?.pushViewController(photoSwipeView, animated: true)

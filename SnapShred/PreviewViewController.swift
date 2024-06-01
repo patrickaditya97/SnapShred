@@ -40,7 +40,7 @@ class PreviewViewController: UIViewController {
         let newImageDataEntity = ImageDataEntity(context: context)
         newImageDataEntity.id = UUID()
         newImageDataEntity.dateCreated = Date()
-        newImageDataEntity.imageData = previewImage.jpegData(compressionQuality: 1.0)
+        newImageDataEntity.imageData = imageData
         
         let timer_value = timer.allCases[timePickerOutlet.selectedSegmentIndex].rawValue
         newImageDataEntity.lifetime = Int64(timer_value)

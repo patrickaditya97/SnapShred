@@ -9,14 +9,25 @@ import UIKit
 
 class PhotoSwipeCollectionViewController: UICollectionViewController {
 
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var images: [ImageDataEntity] = []
     var selectedImageIndex: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchAll()
         setSelfCollectionView()
         addPhotoInfoButton()
+    }
+    
+    func fetchAll() {
+        do {
+            let allImageData = try context.fetch(ImageDataEntity.fetchRequest())
+            images = allImageData
+        } catch {
+            print("Fetch execution failed.")
+        }
     }
     
     func setSelfCollectionView() {
@@ -60,12 +71,21 @@ class PhotoSwipeCollectionViewController: UICollectionViewController {
     }
     
     @objc func toggleImageInfoSegue() {
-//        performSegue(withIdentifier: "imageInfoViewController", sender: self)
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
         guard let imageInfoVC = storyBoard.instantiateViewController(withIdentifier: "imageInfoViewController") as? ImageInfoViewController else { return }
         
-        imageInfoVC.selectedImageData = images[getCurrentlyVisibleItem()]
+        imageInfoVC.selectedImageIndex = getCurrentlyVisibleItem()
+        
+        imageInfoVC.onClose = {
+            self.fetchAll()
+            
+            if self.images.count > 0 {
+                self.collectionView.reloadData()
+            } else {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
         
         self.present(imageInfoVC, animated: true)
     }
@@ -95,8 +115,10 @@ extension PhotoSwipeCollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoSwipeCollectionViewCell.cellIdentifier, for: indexPath) as! PhotoSwipeCollectionViewCell
     
         // Configure the cell
-        guard let uiImage = UIImage(data: images[indexPath[1]].imageData!) else { return UICollectionViewCell() }
-        cell.configure(image: uiImage)
+        if let imageData = images[indexPath[1]].imageData {
+            guard let uiImage = UIImage(data: imageData) else { return UICollectionViewCell() }
+            cell.configure(image: uiImage)
+        }
     
         return cell
     }

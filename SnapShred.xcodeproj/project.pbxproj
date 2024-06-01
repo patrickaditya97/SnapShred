@@ -352,6 +352,7 @@
 				DEVELOPMENT_TEAM = AUL9X9V68D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnapShred/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to allow you to take photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -380,6 +381,7 @@
 				DEVELOPMENT_TEAM = AUL9X9V68D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnapShred/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera to allow you to take photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
