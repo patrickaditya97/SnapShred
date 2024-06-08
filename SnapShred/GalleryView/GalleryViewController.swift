@@ -16,6 +16,12 @@ class GalleryViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionViewLayout()
+        
+        title = "Gallery"
+    }
+    
+    func setupCollectionViewLayout() {
         let fixedSize = (collectionView.frame.size.width/3) - 2
         
         let layout = UICollectionViewFlowLayout()
@@ -23,31 +29,17 @@ class GalleryViewController: UICollectionViewController {
         layout.minimumLineSpacing = 3
         layout.minimumInteritemSpacing = 3
         
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        
+//        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        collectionView.collectionViewLayout = layout
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.cellIdentifier)
-        
-        title = "Gallery"
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        deleteAllData("ImageDataEntity")
         fetchAll()
         
         collectionView.reloadData()
-    }
-    
-    func deleteAllData(_ entity:String) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        let deleteRequest = NSBatchDeleteRequest( fetchRequest: fetchRequest)
-
-        do{
-            try context.execute(deleteRequest)
-        }catch let error as NSError {
-            print(error)
-        }
     }
     
     func fetchAll() {

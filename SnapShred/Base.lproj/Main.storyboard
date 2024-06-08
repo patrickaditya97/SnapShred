@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLK-U0-Xsm">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -214,7 +214,7 @@
                                                         <color key="baseBackgroundColor" red="0.19050591155705296" green="0.57884739595806434" blue="0.76942896839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <action selector="shareAction:" destination="MGM-hN-5jr" eventType="touchUpInside" id="v1f-kn-J41"/>
+                                                        <action selector="shareAction:" destination="MGM-hN-5jr" eventType="touchUpInside" id="Io0-RU-TF2"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -236,7 +236,7 @@
                                         <constraint firstItem="tz3-AA-czX" firstAttribute="top" secondItem="a1V-CW-lGz" secondAttribute="top" id="utl-P4-tS6"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="systemUltraThinMaterial"/>
+                                <blurEffect style="prominent"/>
                             </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OlE-Ys-o1K"/>
@@ -277,7 +277,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYD-Yo-sBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608" y="525"/>
+            <point key="canvasLocation" x="442" y="231"/>
         </scene>
         <!--previewScreen-->
         <scene sceneID="1Ps-qD-bJS">
@@ -302,23 +302,23 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="155"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="66h-UV-UKL">
-                                                        <rect key="frame" x="16" y="34.666666666666629" width="361" height="86"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="66h-UV-UKL">
+                                                        <rect key="frame" x="16" y="36.666666666666636" width="361" height="81.666666666666686"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deletes Within" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylZ-48-f6I">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="361" height="26.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-N9-6Sw">
-                                                                <rect key="frame" x="0.0" y="41" width="361" height="46"/>
+                                                                <rect key="frame" x="0.0" y="36.666666666666742" width="361" height="46"/>
                                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Pa2-vq-ead"/>
                                                                 </constraints>
                                                                 <segments>
-                                                                    <segment title="30 Seconds"/>
+                                                                    <segment title="1 Minute"/>
                                                                     <segment title="30 minutes"/>
                                                                     <segment title="1 Hour"/>
                                                                     <segment title="24 Hours"/>
@@ -413,18 +413,62 @@
         <!--Settings-->
         <scene sceneID="4qC-Tx-3yp">
             <objects>
-                <viewController id="fhG-kH-ewL" sceneMemberID="viewController">
+                <viewController id="fhG-kH-ewL" customClass="SettingsViewController" customModule="SnapShred" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mnl-Jb-enU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liz-sn-m4x">
+                                <rect key="frame" x="16" y="679" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gpM-sm-2fz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete Everything">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteEverythingAction:" destination="fhG-kH-ewL" eventType="touchUpInside" id="RF5-Ni-GzI"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="lW5-3p-s9Y">
+                                <rect key="frame" x="16" y="109" width="361" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMr-lR-60D">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="31"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vtc-8Z-p76">
+                                        <rect key="frame" x="312" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="setAppearance:" destination="fhG-kH-ewL" eventType="touchUpInside" id="TKB-hc-fz5"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hgi-bV-pbF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgi-bV-pbF" firstAttribute="trailing" secondItem="lW5-3p-s9Y" secondAttribute="trailing" constant="16" id="3UQ-sj-zzK"/>
+                            <constraint firstItem="lW5-3p-s9Y" firstAttribute="leading" secondItem="hgi-bV-pbF" secondAttribute="leading" constant="16" id="3g4-xo-Chi"/>
+                            <constraint firstItem="liz-sn-m4x" firstAttribute="leading" secondItem="hgi-bV-pbF" secondAttribute="leading" constant="16" id="Evu-W7-xs9"/>
+                            <constraint firstItem="lW5-3p-s9Y" firstAttribute="top" secondItem="hgi-bV-pbF" secondAttribute="top" constant="50" id="JLY-l4-DiP"/>
+                            <constraint firstItem="hgi-bV-pbF" firstAttribute="trailing" secondItem="liz-sn-m4x" secondAttribute="trailing" constant="16" id="eh9-vJ-te5"/>
+                            <constraint firstItem="hgi-bV-pbF" firstAttribute="bottom" secondItem="liz-sn-m4x" secondAttribute="bottom" constant="30" id="qDS-yL-5ds"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="YNM-qV-0LZ"/>
+                    <connections>
+                        <outlet property="darkModeToggle" destination="vtc-8Z-p76" id="fuu-yK-k3w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gko-y6-eSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="1044"/>
+            <point key="canvasLocation" x="1985" y="1051"/>
         </scene>
     </scenes>
     <resources>
@@ -443,6 +487,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="viewFlipsideBackgroundColor">
             <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

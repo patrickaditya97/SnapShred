@@ -23,6 +23,7 @@
 		FBCC52CD2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC52CC2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift */; };
 		FBCC52D22C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC52D02C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift */; };
 		FBCC52D32C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCC52D12C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib */; };
+		FBFE0B502C0BBE0E00B009B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFE0B4F2C0BBE0E00B009B5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		FBCC52CC2C010A0000D81C53 /* PhotoSwipeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeCollectionViewController.swift; sourceTree = "<group>"; };
 		FBCC52D02C010A8200D81C53 /* PhotoSwipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSwipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		FBCC52D12C010A8200D81C53 /* PhotoSwipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSwipeCollectionViewCell.xib; sourceTree = "<group>"; };
+		FBFE0B4F2C0BBE0E00B009B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				FB7BDCA82BFC337D001107C9 /* TabBarController.swift */,
 				FB215F612BE82C6700D4B8CB /* CameraScreenViewController.swift */,
 				FB74DE2B2BF9AB4100880F29 /* PreviewViewController.swift */,
+				FBFE0B4F2C0BBE0E00B009B5 /* SettingsViewController.swift */,
 				FBCC52D42C010A8A00D81C53 /* PhotoSwipe */,
 				FBCC52CB2BFD35A000D81C53 /* GalleryView */,
 				FB215F502BE8184B00D4B8CB /* Main.storyboard */,
@@ -198,6 +201,7 @@
 				FB215F4D2BE8184B00D4B8CB /* SceneDelegate.swift in Sources */,
 				FB74DE2C2BF9AB4100880F29 /* PreviewViewController.swift in Sources */,
 				FB1BA3662C0289710043F152 /* ImageInfoViewController.swift in Sources */,
+				FBFE0B502C0BBE0E00B009B5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

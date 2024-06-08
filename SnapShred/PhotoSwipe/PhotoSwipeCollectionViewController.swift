@@ -21,6 +21,13 @@ class PhotoSwipeCollectionViewController: UICollectionViewController {
         addPhotoInfoButton()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+        fetchAll()
+        collectionView.reloadData()
+    }
+    
     func fetchAll() {
         do {
             let allImageData = try context.fetch(ImageDataEntity.fetchRequest())

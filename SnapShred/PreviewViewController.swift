@@ -16,8 +16,8 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var timePickerOutlet: UISegmentedControl!
     
     enum timer: Int, CaseIterable {
-        case HALF_MINUTE = 30
         case ONE_MINUTE = 60
+        case HALF_HOUR = 1_800
         case HOUR = 3_600
         case DAY = 86_400
     }

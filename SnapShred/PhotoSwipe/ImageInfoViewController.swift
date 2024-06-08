@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import LinkPresentation
 
 class ImageInfoViewController: UIViewController {
     
@@ -58,7 +59,6 @@ class ImageInfoViewController: UIViewController {
         }
     }
     
-    // Check this method once to see why the app is closing automatically.
     @IBAction func deleteAction(_ sender: UIButton) {
         let alert = UIAlertController(title: "Alert", message: "Are you sure you want to delete this?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
@@ -103,18 +103,22 @@ class ImageInfoViewController: UIViewController {
         
         present(alert, animated: true)
     }
-    
-    @IBAction func shareAction(_ sender: UIButton) {
-        guard let imageData = selectedImageData.imageData else { return }
-        
-        let images: [Any] = [UIImage(data: imageData)!, self]
-        let activityVC = UIActivityViewController(activityItems: images, applicationActivities: nil)
-        present(activityVC, animated: true)
-        
-    }
 }
 
 extension ImageInfoViewController: UIActivityItemSource {
+    
+    @IBAction func shareAction(_ sender: UIButton) {
+        
+        if let imageData = selectedImageData.imageData {
+            if let image = UIImage(data: imageData) {
+                let images: [Any] = [image, self]
+                let activityVC = UIActivityViewController(activityItems: images, applicationActivities: nil)
+                present(activityVC, animated: true)
+            }
+        }
+        
+    }
+    
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         return ""
     }
@@ -123,8 +127,20 @@ extension ImageInfoViewController: UIActivityItemSource {
         return nil
     }
     
-    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivity.ActivityType?, suggestedSize size: CGSize) -> UIImage? {
-        guard let imageData = selectedImageData.imageData else { return nil }
-        return UIImage(data: imageData)
+    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
+        
+        guard let image = UIImage(named: "CurrentImageThumbnail") else { return LPLinkMetadata() }
+        let imageProvider = NSItemProvider(object: image)
+        
+        let metaData = LPLinkMetadata()
+        metaData.imageProvider = imageProvider
+        metaData.title = "Shareable Image"
+        
+        return metaData
     }
+    
+//    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivity.ActivityType?, suggestedSize size: CGSize) -> UIImage? {
+//        guard let imageData = selectedImageData.imageData else { return nil }
+//        return UIImage(data: imageData)
+//    }
 }
