@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handleAppRefresh(task: BGAppRefreshTask) {
-        let backgroundContext = persistentContainer.viewContext
+        let backgroundContext = persistentContainer.newBackgroundContext()
         
         backgroundContext.perform {
             do {
