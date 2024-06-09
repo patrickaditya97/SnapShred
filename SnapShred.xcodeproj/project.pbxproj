@@ -88,8 +88,8 @@
 				FBCC52D42C010A8A00D81C53 /* PhotoSwipe */,
 				FBCC52CB2BFD35A000D81C53 /* GalleryView */,
 				FB215F502BE8184B00D4B8CB /* Main.storyboard */,
-				FB215F562BE8185000D4B8CB /* Assets.xcassets */,
 				FB215F582BE8185000D4B8CB /* LaunchScreen.storyboard */,
+				FB215F562BE8185000D4B8CB /* Assets.xcassets */,
 				FB215F5B2BE8185000D4B8CB /* Info.plist */,
 				FB215F532BE8184B00D4B8CB /* SnapShred.xcdatamodeld */,
 			);

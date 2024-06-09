@@ -36,9 +36,9 @@ class GalleryViewController: UICollectionViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("GalleryViewController---viewDidAppear")
         
         fetchAll()
-        
         collectionView.reloadData()
     }
     

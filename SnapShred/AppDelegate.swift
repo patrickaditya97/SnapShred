@@ -91,6 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         let container = NSPersistentContainer(name: "SnapShred")
         container.persistentStoreDescriptions.first?.setOption(true as NSObject, forKey: NSMigratePersistentStoresAutomaticallyOption)
+        container.persistentStoreDescriptions.first?.setOption(true as NSObject, forKey: NSInferMappingModelAutomaticallyOption)
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

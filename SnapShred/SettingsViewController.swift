@@ -59,7 +59,7 @@ class SettingsViewController: UIViewController {
     
     func setDarkModeUI() {
         let defaultAppearance = UserDefaults.standard.bool(forKey: "isDarkModeOn")
-        print(UIApplication.shared.connectedScenes)
+        
         for scene in UIApplication.shared.connectedScenes {
             if let windowScene = scene as? UIWindowScene {
                 if let window = windowScene.windows.first {
