@@ -1,9 +1,3 @@
-# SnapShred
-
-Sure! Here's an elaborate description explaining each screen with placeholders for screenshots:
-
----
-
 **SnapShred iOS App**
 
 SnapShred is an innovative application developed as the final project for CSC491, designed to capture photos with customizable lifetimes that automatically delete. The app prioritizes user privacy and provides a sleek, intuitive interface with six main screens. Below is a detailed overview of each screen along with placeholders for screenshots.
